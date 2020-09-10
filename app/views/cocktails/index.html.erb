@@ -1,0 +1,21 @@
+<div class="banner mb-4">
+  <div class="container">
+    <div class="banner-info">
+      <h1>Cocktails</h1>
+      <p> <em>There is always time for a cocktail</em></p>
+      <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <div class="cocktail-card py-2">
+      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+    </div>
+      <% end %>
+  </div>
+</div>
+
+
