@@ -4,7 +4,7 @@
 <h1> <%= @cocktail.name %></h1>
   <% @cocktail.doses.each do |dose| %>
   <div class="list-group-item d-flex">
-    <p><%= dose.description %></p> <p id="grow"><%= dose.ingredient.name %></p>
+    <p id="grow"><%= dose.description %> <%= dose.ingredient.name %></p>
     <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
   </div>
   <% end %>
