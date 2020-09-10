@@ -3,7 +3,7 @@
 
   <%= simple_form_for(@cocktail) do |f|%>
   <%= f.input :name %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-primary mb-4' %>
   <% end %>
 
 <%= link_to "Back", cocktails_path %>

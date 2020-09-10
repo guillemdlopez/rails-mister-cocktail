@@ -2,19 +2,41 @@
   <div class="container">
     <div class="banner-info">
       <h1>Cocktails</h1>
-      <p> <em>There is always time for a cocktail</em></p>
+      <p class="mb-4"> <em>There is always time for a cocktail</em></p>
       <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
+      <form novalidate="novalidate" class="simple_form search mt-4" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+          <button name="button" type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card py-2">
-      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+  <div class="row">
+    <div class="col-6">
+      <div class="presentation text-left py-4">
+        <h2><strong>The most popular!</strong></h2>
+        <p class="mb-4">Here you have a list of the most popular Cocktails recommended by our users!
+        Do you also want to recommend a Cocktail? Go ahead!</p>
+        <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
+      </div>
     </div>
-      <% end %>
+
+    <div class="col-6">
+      <div class="cards">
+        <% @cocktails.each do |cocktail| %>
+        <div class="cocktail-card py-2 mt-4">
+          <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+        </div>
+          <% end %>
+      </div>
+
+    </div>
   </div>
 </div>
 

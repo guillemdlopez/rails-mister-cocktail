@@ -1,9 +1,22 @@
 // Specific CSS for your home-page
+
+body {
+  background: $black;
+  color: $light-gray;
+}
+
+.navbar {
+  padding: 25px;
+  position: sticky;
+  top: 0px;
+}
+
 .banner {
   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://source.unsplash.com/featured/?cocktail");
   color: white;
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
 .banner-info {
@@ -12,10 +25,32 @@
 }
 
 .banner-info {
-} h1 {
-  font-size: 60px;
+  h1 {
+    font-size: 100px;
+    font-weight: bold;
+  }
+
+  em {
+    color: white;
+    font-size: 40px;
+  }
 }
 
+.banner-info {
+} em {
+  color: white;
+
+}
+
+.presentation {
+  p {
+    font-size: 24px;
+    color: #818181;
+  }
+  h2 {
+    font-size: 45px;
+  }
+}
 .cocktail-card {
   a {
     color: white;
@@ -25,7 +60,7 @@
 }
 
 .cocktail-card {
-  background-image: linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://source.unsplash.com/featured/?cocktail");
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://source.unsplash.com/featured/?cocktail");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +71,7 @@
   height: 150px;
   background-position: center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-  width: 350px;
+  width: 100%;
 
   &:hover {
     background-image: linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url("https://source.unsplash.com/featured/?cocktail");
@@ -53,43 +88,47 @@
   margin-bottom: 0px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
-  grid-gap: 16px;
+// .cards {
+//   display: grid;
+//   grid-template-columns: 1fr, 1fr, 1fr;
+//   grid-gap: 16px;
+// }
+
+.list-group-item {
+} p {
+  color: black;
 }
 
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
