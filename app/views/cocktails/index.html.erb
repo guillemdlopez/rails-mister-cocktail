@@ -3,14 +3,6 @@
     <div class="banner-info">
       <h1 class="mb-4">Drink it. Recommend it.</h1>
       <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
-      <!-- <form novalidate="novalidate" class="simple_form search mt-4" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-primary">
-            <i class="fas fa-search"></i> Search
-          </button>
-        </div>
-      </form> -->
     </div>
   </div>
 </div>
@@ -36,8 +28,7 @@
       <h1 class="text-center">Recommend it.</h1>
       <div class="recommend text-center py-4">
         <h2><strong>Share your favourite!</strong></h2>
-        <p class="mb-4">Do you also want to recommend a Cocktail? Go ahead!</p>
-            <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
+        <p class="mb-4">Do you also want to recommend a cocktail? Go ahead!</p>
       </div>
       <div class="form text-center">
         <%= simple_form_for(@cocktail) do |f|%>
@@ -50,25 +41,25 @@
 </div>
 
 <div class="footer bg-black">
-  <h4 class="text-secondary text-center pt-5">Follow us on social media for more content</h4>
-  <ul class="inline-list pl-0 text-center">
+  <ul class="inline-list pl-0 mb-0 text-center">
+     <h4 class="text-secondary text-center pt-5">Follow us on social media for more content</h4>
     <li>
-      <a href="">
+      <a href="#">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="#">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="#">
         <i class="fab fa-github"></i>
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="#">
         <i class="fab fa-instagram"></i>
       </a>
     </li>
