@@ -1,8 +1,7 @@
-<div class="banner mb-4">
+<div class="banner">
   <div class="container">
     <div class="banner-info">
-      <h1>Cocktails</h1>
-      <p class="mb-4"> <em>There is always time for a cocktail</em></p>
+      <h1 class="mb-4">Drink it. Recommend it.</h1>
       <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
       <form novalidate="novalidate" class="simple_form search mt-4" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
         <div class="search-form-control form-group">
@@ -16,18 +15,10 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <div class="presentation text-left py-4">
-        <h2><strong>The most popular!</strong></h2>
-        <p class="mb-4">Here you have a list of the most popular Cocktails recommended by our users!
-        Do you also want to recommend a Cocktail? Go ahead!</p>
-        <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
-      </div>
-    </div>
-
-    <div class="col-6">
+<div class="background-drink">
+  <div class="container">
+    <div class="wrapper w-100">
+      <h1 class="text-center">Drink it.</h1>
       <div class="cards">
         <% @cocktails.each do |cocktail| %>
         <div class="cocktail-card py-2 mt-4">
@@ -35,9 +26,53 @@
         </div>
           <% end %>
       </div>
-
     </div>
   </div>
 </div>
+
+<div class="background-recommend">
+  <div class="container">
+    <div class="wrapper">
+      <h1 class="text-center">Recommend it.</h1>
+      <div class="recommend text-center py-4">
+        <h2><strong>Share your favourite!</strong></h2>
+        <p class="mb-4">Do you also want to recommend a Cocktail? Go ahead!</p>
+            <%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-primary'%>
+      </div>
+      <div class="form text-center">
+        <%= simple_form_for(@cocktail) do |f|%>
+        <%= f.input :name %>
+        <%= f.submit class: 'btn btn-primary mb-4' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer bg-black">
+  <ul class="inline-list pl-0 text-center">
+    <li>
+      <a href="">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
 
 
